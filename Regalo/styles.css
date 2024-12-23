@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: #FAD2E1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 500px; /* Ajusta el ancho a tu gusto */
+  height: 350px; /* Aumentamos un poco la altura */
+  overflow: hidden;
+  margin-top: 50px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra sutil debajo de la imagen */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease; /* Animación suave al cambiar de imagen */
+  transform: translateX(0);
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* Llenar el contenedor */
+  object-position: 50% 50%; /* Centrar la imagen dentro del recorte */
+  flex-shrink: 0;
+}
+
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.content {
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.content h1 {
+  margin-bottom: 10px;
+}
